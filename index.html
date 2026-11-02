@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Preços de Combustíveis — AOP2</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<header><div class="container"><h1>Preços de Combustíveis</h1><p>Dashboard do projeto AOP2</p></div></header>
+<main class="container">
+<section class="intro"><h2>Consulta de preços</h2><p>Visualize os dados dos postos, combustíveis e preços coletados.</p></section>
+<section class="cards" id="cards"></section>
+
+<section class="panel">
+<h2>Preço médio por combustível</h2>
+<p>Comparação do preço médio dos registros disponíveis.</p>
+<div class="chart"><canvas id="porCombustivel"></canvas></div>
+</section>
+
+<section class="panel">
+<h2>Preço médio por posto</h2>
+<p>Comparação da média dos combustíveis em cada posto.</p>
+<div class="chart"><canvas id="porPosto"></canvas></div>
+</section>
+
+<section class="panel">
+<h2>Dados cadastrados</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Posto</th><th>Bairro</th><th>Combustível</th><th>Preço</th><th>Data</th>
+</tr></thead><tbody id="tabela"></tbody></table></div>
+</section>
+
+<div class="notice"><b>Observação:</b> os dados exibidos são os registros atualmente definidos no projeto físico. O arquivo <code>js/dados.js</code> está preparado para receber as demais coletas em datas diferentes exigidas pela AOP2.</div>
+</main>
+<footer>Projeto de Banco de Dados — AOP2</footer>
+<script src="js/dados.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
